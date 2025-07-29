@@ -21,7 +21,7 @@
 body {
   display: grid;
 
-  grid-template-columns: minmax(300px, 1fr) minmax(600px, 5fr);
+  grid-template-columns: 250px minmax(600px, 5fr);
   grid-template-rows: minmax(125px, 1fr) minmax(300px, 5fr);
 
   width: 100vw;
@@ -64,6 +64,8 @@ img {
 
 .sidebar__nav--main {
   display: grid;
+
+  font-size: 16px;
 
   grid-template-columns: 1fr;
   gap: 10px;
