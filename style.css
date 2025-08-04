@@ -206,4 +206,23 @@ img {
 main {
   grid-area: 2 / 2 / 2 / 2;
   background-color: var(--color-background-light);
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  grid-template-areas:
+    "main-projects main-announcements"
+    "main-projects main-trending";
+}
+
+#main__projects {
+  grid-area: main-projects;
+}
+
+#main__sidebar--announcements {
+  grid-area: main-announcements;
+}
+
+#main__sidebar--trending {
+  grid-area: main-trending;
 }
