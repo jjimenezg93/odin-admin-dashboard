@@ -230,14 +230,25 @@ main p {
   grid-area: main-projects;
 
   display: grid;
+  grid-template-rows: 50px 1fr;
+  margin-left: 20px;
+}
+
+#main__projects > h1 {
+  align-self: end;
+}
+
+#main__projects--cards {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
 
   justify-content: center;
   align-items: center;
 }
 
-#main__projects .project-card {
+#main__projects--cards .project-card {
   background-color: white;
 
   border-radius: 5px;
@@ -251,7 +262,6 @@ main p {
   min-width: 250px;
   max-width: 300px;
   height: 180px;
-  margin: 20px;
 
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
