@@ -209,14 +209,62 @@ main {
 
   display: grid;
   grid-template-columns: 2fr 1fr;
+  gap: var(--default-gap);
 
   grid-template-areas:
     "main-projects main-announcements"
     "main-projects main-trending";
 }
 
+main h1 {
+  color: black;
+  font-size: 18px;
+}
+
+main p {
+  color: rgb(99, 99, 99);
+  font-size: 14px;
+}
+
 #main__projects {
   grid-area: main-projects;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+
+  justify-content: center;
+  align-items: center;
+}
+
+#main__projects .project-card {
+  background-color: white;
+
+  border-radius: 5px;
+  box-shadow: 5px 5px 8px 0px rgba(140, 140, 140, 0.49),
+    10px 0px 0px 0px rgba(240, 180, 41, 1) inset;
+  -webkit-box-shadow: 5px 5px 8px 0px rgba(140, 140, 140, 0.49),
+    10px 0px 0px 0px rgba(240, 180, 41, 1) inset;
+  -moz-box-shadow: 5px 5px 8px 0px rgba(140, 140, 140, 0.49),
+    10px 0px 0px 0px rgba(240, 180, 41, 1) inset;
+
+  min-width: 250px;
+  max-width: 300px;
+  height: 180px;
+  margin: 20px;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: end;
+  padding: 0px 20px;
+}
+
+.project-card p {
+  align-self: start;
+}
+
+.project-card footer {
+  justify-self: end;
 }
 
 #main__sidebar--announcements {
