@@ -110,8 +110,9 @@ img {
   height: 200px;
 
   padding-left: 20px;
+  padding-right: 40px;
 
-  * {
+  *:not(.header__actions > *) {
     color: black;
     font-weight: 700;
   }
@@ -153,7 +154,7 @@ img {
       var(--default-icon-large-width)
     )
     fit-content(200px);
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   gap: var(--default-gap);
 }
@@ -171,6 +172,7 @@ img {
     fit-content(300px);
   gap: var(--default-gap);
   justify-content: start;
+  align-items: center;
 }
 
 .header__welcome h1 {
@@ -183,9 +185,25 @@ img {
 
 .header__actions {
   grid-area: header-actions;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, fit-content(100px));
+  gap: var(--default-gap);
+  justify-content: end;
+  align-items: center;
 }
 
-#main-content {
+.header__actions button {
+  background-color: rgb(25, 146, 212);
+  border-radius: 20px;
+  border-width: 0px;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+main {
   grid-area: 2 / 2 / 2 / 2;
   background-color: var(--color-background-light);
 }
