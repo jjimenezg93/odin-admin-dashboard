@@ -237,6 +237,7 @@ main p {
 
 #main__projects > h1 {
   align-self: end;
+  font-size: 20px;
 }
 
 #main__projects--cards {
@@ -276,6 +277,7 @@ main p {
 
 .project-card footer {
   justify-self: end;
+  align-self: center;
 }
 
 #main__sidebar--announcements {
