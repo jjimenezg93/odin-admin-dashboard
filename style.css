@@ -296,7 +296,8 @@ main > section > h1 {
   padding: 20px;
 }
 
-#main__sidebar--announcements > div {
+#main__sidebar--announcements > div,
+#main__sidebar--trending > div {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 20px;
@@ -313,9 +314,15 @@ main > section > h1 {
   background-color: var(--color-background-primary-light);
 }
 
-#main__sidebar--announcements > article {
+#main__sidebar--trending article {
+  display: grid;
+
+  grid-template-columns: fit-content(var(--default-icon-large-width)) 1fr;
+  column-gap: 10px;
 }
 
 #main__sidebar--trending {
   grid-area: main-trending;
+
+  padding: 20px;
 }
